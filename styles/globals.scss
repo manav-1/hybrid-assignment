@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+$primary-dark: #df7861;
+$primary-light: #fcf8e8;
+$primary-dark-2: #395b64;
+$primary-light-2: #94b49f;
+$primary-font: Ubuntu;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $primary-font;
+  color: $primary-dark;
+  background: $primary-light;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  h1.heading {
+    font-size: 3em;
+    text-align: center;
+  }
+}
+.input-container {
+  width: 60%;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  .input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background: transparent;
+    border-bottom: 1px solid $primary-dark;
+    font-size: 1.2rem;
+    font-family: $primary-font;
+    margin-right: 10px;
+  }
+  .button {
+    padding: 8px 40px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 2px;
+    background: $primary-dark;
+    font-size: 1.2rem;
+    font-family: $primary-font;
+    color: $primary-light;
+  }
+}
+
+.article-container .article-item {
+  width: 80%;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 5px;
+  background: transparentize($primary-dark-2, 0.9);
+  display: flex;
+  p {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-family: $primary-font;
+    color: $primary-dark;
+    flex: 1;
+  }
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+.article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  h1 {
+    font-size: 3rem;
+    position: relative;
+    .article-points {
+      position: absolute;
+      bottom: -5px;
+      font-size: 0.8rem;
+      display: inline-flex;
+      justify-content: center;
+    }
+  }
+}
+.comments-container {
+  width: 80%;
+}
+.article-comment {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: transparentize($primary-dark-2, 0.8);
+  position: relative;
+  color: $primary-dark-2;
+  div {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+
+    span {
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+}
